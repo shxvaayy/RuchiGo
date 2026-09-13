@@ -14,18 +14,18 @@ import { NotificationProvider } from "./context/NotificationContext.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      <CartProvider>
-        <BrowserRouter>
-          <AuthProvider>
+      <BrowserRouter>
+        <AuthProvider>
+          <CartProvider>
             <RestaurantProvider>
               <NotificationProvider>
                 <App />
                 <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
               </NotificationProvider>
             </RestaurantProvider>
-          </AuthProvider>
-        </BrowserRouter>
-      </CartProvider>
+          </CartProvider>
+        </AuthProvider>
+      </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
 );
